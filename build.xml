@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ferret" basedir="./" default="all">
+  <property name="tmp" value="/tmp" />
+  <property name="wsname" value="test" />
+  <property name="package" value="${phing.project.name}" override="true" />
+  <property name="builddir" value="${tmp}/build/${phing.project.name}" override="true" />
+  <property name="srcdir" value="src/" override="true" />
+  <property name="reportdir" value="${builddir}/test/report" />
+  <property name="docsdir" value="${builddir}/test/report/api" />
+
+  <target name="setup" description="run tests">
+    <!-- Create dirs -->
+    <mkdir dir="${reportdir}"/>
+    <mkdir dir="${reportdir}/coverage"/>
+    <mkdir dir="${docsdir}"/>
+  </target>
+
+  <target name="tests" depends="setup" description="run tests">
+    <exec command="phpunit --configuration test/phpunit.xml"/>
+  </target>
+
+  <target name="standards" depends="setup" description="test for code standards">
+    <exec command="phpmd ${srcdir} xml codesize,unusedcode,naming,design --reportfile ${reportdir}/pmd.xml"/>
+    <exec command="phpcs --report=checkstyle --standard=PEAR --extensions=php --tab-width=4 --report-file=${reportdir}/phpcs.xml ${srcdir}"/>
+  </target>
+
+  <target name="docs" depends="setup,tests" description="generate API documentation">
+    <phpdoc title="Autoload"
+            sourcecode="yes"
+            destdir="${docsdir}"
+            output="HTML:frames:DOM/phphtmllib"
+            quiet="true">
+      <fileset dir="${srcdir}"/>
+    </phpdoc>
+  </target>
+  
+  <target name="all" depends="setup,tests,standards,docs" description="run all targets"/>
+</project>
