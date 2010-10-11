@@ -9,7 +9,7 @@
          stopOnFailure="false">
            
   <testsuite name="all">
-    <file>test/Ferret/*Test.php</file>
+    <directory suffix="Test.php">test/Ferret/</directory>
   </testsuite>
   
   <logging>
