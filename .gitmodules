@@ -1,3 +1,0 @@
-[submodule "src/Autoload"]
-	path = src/Autoload
-	url = git://getversioned.com/autoload/autoload.git

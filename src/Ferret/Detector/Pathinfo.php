@@ -66,7 +66,14 @@ class Pathinfo implements DetectorInterface
   
   public function setMapping($mapping)
   {
-    $this->mapping = $mapping;
+    if (\is_array($mapping) && !empty($mapping))
+    {
+      $this->mapping = $mapping;
+      
+      return true;
+    }
+    
+    return false;
   }
   
   

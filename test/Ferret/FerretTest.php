@@ -3,6 +3,9 @@ namespace Ferret;
 
 require_once 'PHPUnit/Framework.php';
 
+require_once 'src/Ferret/FerretInterface.php';
+require_once 'src/Ferret/Ferret.php';
+
 use Ferret\Detector\Pathinfo;
 
 /**
