@@ -76,7 +76,11 @@ class Pathinfo implements DetectorInterface
     return false;
   }
   
-  
+  public function getMapping() 
+  {
+    return $this->mapping;
+  }
+    
   public function detect($filepath)
   {
     $ext = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
