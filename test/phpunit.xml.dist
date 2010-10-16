@@ -11,6 +11,10 @@
   <testsuite name="all">
     <directory suffix="Test.php">test/Ferret/</directory>
   </testsuite>
+
+  <testsuite name="minimal">
+    <file>test/Ferret/FerretTest.php</file>
+  </testsuite>
   
   <logging>
     <log type="coverage-html"

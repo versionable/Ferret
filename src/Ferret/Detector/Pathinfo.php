@@ -4,7 +4,7 @@ namespace Ferret\Detector;
 
 use \Ferret\Detector\DetectorInterface;
 
-class Pathinfo implements DetectorInterface
+class Pathinfo extends DetectorAbstract
 {
   
   protected $mapping = array(
