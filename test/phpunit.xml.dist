@@ -11,15 +11,11 @@
   <testsuite name="all">
     <file>test/Ferret/FerretTest.php</file>
     <file>test/Ferret/Detector/CompositeTest.php</file>
-    <file>test/Ferret/Detector/FileinfoTest.php</file>
-    <file>test/Ferret/Detector/MIMETypeTest.php</file>
+    <!--<file>test/Ferret/Detector/FileinfoTest.php</file>-->
+    <!--<file>test/Ferret/Detector/MIMETypeTest.php</file>-->
     <file>test/Ferret/Detector/PathinfoTest.php</file>
   </testsuite>
 
-  <testsuite name="minimal">
-    <file>test/Ferret/FerretTest.php</file>
-  </testsuite>
-  
   <logging>
     <log type="coverage-html"
          target="build/Ferret/test/report/coverage"
