@@ -61,4 +61,3 @@ class PathinfoTest extends \PHPUnit_Framework_TestCase
       $this->assertFalse($this->object->setMapping(null));
     }   
 }
-?>

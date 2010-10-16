@@ -80,4 +80,3 @@ class FerretTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->object->getMimeType('somefile.unknown'));
     }
 }
-?>
