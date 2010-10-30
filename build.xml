@@ -16,7 +16,7 @@
   </target>
 
   <target name="tests" depends="setup" description="run tests">
-    <exec command="phpunit --configuration test/phpunit.xml.dist"/>
+    <exec command="phpunit --configuration test/phpunit.xml.dist --exclude-group ExternalLibrary"/>
   </target>
 
   <target name="standards" depends="setup" description="test for code standards">
