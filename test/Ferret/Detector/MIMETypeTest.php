@@ -11,7 +11,7 @@ require_once 'src/Ferret/Detector/MIMEType.php';
 /**
  * Test class for MIMEType.
  * @group Ferret
- * @group ExternalLibrary
+   * @group ExternalLibrary
  * @group Fileinfo
  */
 class MIMETypeTest extends \PHPUnit_Framework_TestCase {
