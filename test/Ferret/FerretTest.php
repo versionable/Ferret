@@ -44,7 +44,9 @@ class FerretTest extends \PHPUnit_Framework_TestCase
     {
       $stub = $this->getMock("Ferret\Detector\DetectorInterface");
       
-      $this->assertTrue($this->object->setDetector($stub));
+      $this->object->setDetector($stub);
+      
+      $this->assertEquals($stub, $this->readAttribute($this->object, 'detector'));
     }
 
     /**
