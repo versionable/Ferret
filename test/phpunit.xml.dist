@@ -9,11 +9,7 @@
          stopOnFailure="false">
            
   <testsuite name="all">
-    <file>test/Ferret/FerretTest.php</file>
-    <file>test/Ferret/Detector/CompositeTest.php</file>
-    <!--<file>test/Ferret/Detector/FileinfoTest.php</file>-->
-    <!--<file>test/Ferret/Detector/MIMETypeTest.php</file>-->
-    <file>test/Ferret/Detector/PathinfoTest.php</file>
+    <directory suffix="Test.php">test/Ferret/</directory>
   </testsuite>
 
   <logging>
