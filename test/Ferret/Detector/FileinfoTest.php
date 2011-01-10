@@ -1,8 +1,6 @@
 <?php
 namespace Ferret\Detector;
 
-require_once 'PHPUnit/Framework.php';
-
 require_once 'src/Ferret/Detector/DetectorInterface.php';
 require_once 'src/Ferret/Detector/DetectorAbstract.php';
 require_once 'src/Ferret/Detector/Fileinfo.php';

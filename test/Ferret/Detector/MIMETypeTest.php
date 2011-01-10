@@ -2,8 +2,6 @@
 
 namespace Ferret\Detector;
 
-require_once 'PHPUnit/Framework.php';
-
 require_once 'src/Ferret/Detector/DetectorInterface.php';
 require_once 'src/Ferret/Detector/DetectorAbstract.php';
 require_once 'src/Ferret/Detector/MIMEType.php';
@@ -11,7 +9,7 @@ require_once 'src/Ferret/Detector/MIMEType.php';
 /**
  * Test class for MIMEType.
  * @group Ferret
-   * @group ExternalLibrary
+ * @group ExternalLibrary
  * @group Fileinfo
  */
 class MIMETypeTest extends \PHPUnit_Framework_TestCase {

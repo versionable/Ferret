@@ -1,27 +1,44 @@
 <?xml version="1.0"?>
 
 <!-- see http://www.phpunit.de/wiki/Documentation -->
-<phpunit bootstrap="test/bootstrap.php"
-         colors="true"
+<phpunit colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          stopOnFailure="false">
-           
-  <testsuite name="all">
-    <directory suffix="Test.php">test/Ferret/</directory>
-  </testsuite>
+
+  <testsuites>
+    <testsuite name="Ferret">
+      <file>test/Ferret/FerretTest.php</file>
+    </testsuite>
+    <testsuite name="Detectors">
+      <file>test/Ferret/Detector/CompositeTest.php</file>
+      <file>test/Ferret/Detector/FileinfoTest.php</file>
+      <file>test/Ferret/Detector/PathinfoTest.php</file>
+    </testsuite>
+    <testsuite name="ExternalDetectors">
+      <file>test/Ferret/Detector/MIMETypeTest.php</file>
+    </testsuite>
+  </testsuites>
+
+  <groups>
+    <include>
+    </include>
+    <exclude>
+      <group>ExternalDetectors</group>
+    </exclude>
+  </groups>
 
   <logging>
     <log type="coverage-html"
-         target="build/Ferret/test/report/coverage"
+         target="../build/Ferret/test/report/coverage"
          charset="UTF-8"
          yui="true"
          highlights="true"/>
     <log type="testdox-html"
-         target="build/Ferret/test/report/testdox.html"/>
+         target="../build/Ferret/test/report/testdox.html"/>
     <log type="junit"
-         target="build/Ferret/test/report/logfile.xml"
+         target="../build/Ferret/test/report/logfile.xml"
          logIncompleteSkipped="false"/>
   </logging>
 </phpunit>
