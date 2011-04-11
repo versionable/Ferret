@@ -30,22 +30,9 @@ class Fileinfo extends DetectorAbstract
     
   public function detect($filepath)
   {
-    // Support for PHP 5.3+
-    if (defined('FILEINFO_MIME_TYPE'))
-    {
-      $finfo = new \finfo(FILEINFO_MIME_TYPE);
+    $finfo = new \finfo(FILEINFO_MIME_TYPE);
 
-      $type = $finfo->file($filepath);
-    }
-    else
-    {
-      $finfo = \finfo_open(FILEINFO_MIME);
-
-      $type = \finfo_file($finfo, $filepath);
-
-      \finfo_close($finfo);
-    }
-    
+    $type = $finfo->file($filepath);
     
     if ($type !== false)
     {
