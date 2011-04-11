@@ -1,8 +1,8 @@
 <?php
 
-namespace Ferret\Detector;
+namespace Versionable\Ferret\Detector;
 
-use \Ferret\Detector\DetectorInterface;
+use Versionable\Ferret\Detector\DetectorInterface;
 
 class Pathinfo extends DetectorAbstract
 {

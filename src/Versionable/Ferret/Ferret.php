@@ -1,9 +1,9 @@
 <?php
 
-namespace Ferret;
+namespace Versionable\Ferret;
 
-use Ferret\FerretInterface;
-use Ferret\Detector\DetectorInterface;
+use Versionable\Ferret\FerretInterface;
+use Versionable\Ferret\Detector\DetectorInterface;
 
 
 class Ferret implements FerretInterface

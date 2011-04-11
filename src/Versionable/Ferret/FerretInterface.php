@@ -1,8 +1,8 @@
 <?php
 
-namespace Ferret;
+namespace Versionable\Ferret;
 
-use Ferret\Detector\DetectorInterface;
+use Versionable\Ferret\Detector\DetectorInterface;
 
 interface FerretInterface {
 

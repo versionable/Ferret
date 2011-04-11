@@ -1,6 +1,6 @@
 <?php
 
-namespace Ferret\Detector\Exception;
+namespace Versionable\Ferret\Detector\Exception;
 
 class DetectorException extends \RuntimeException
 {

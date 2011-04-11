@@ -1,10 +1,10 @@
 <?php
 
-namespace Ferret\Detector;
+namespace Versionable\Ferret\Detector;
 
-use \Ferret\Detector\DetectorInterface;
+use Versionable\Ferret\Detector\DetectorInterface;
 
-use \Ferret\Detector\Exception\DetectorException;
+use Versionable\Ferret\Detector\Exception\DetectorException;
 
 class Composite extends DetectorAbstract
 {
