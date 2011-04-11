@@ -1,10 +1,10 @@
 <?php
 
-namespace Ferret\Detector;
+namespace Versionable\Ferret\Detector;
 
-require_once 'src/Ferret/Detector/DetectorInterface.php';
-require_once 'src/Ferret/Detector/DetectorAbstract.php';
-require_once 'src/Ferret/Detector/Composite.php';
+require_once 'src/Versionabe/Ferret/Detector/DetectorInterface.php';
+require_once 'src/Versionabe/Ferret/Detector/DetectorAbstract.php';
+require_once 'src/Versionabe/Ferret/Detector/Composite.php';
 
 /**
  * Test class for Composite.
@@ -40,7 +40,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase {
   public function testDetect()
   {
     
-    $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+    $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
 
     $stub->expects($this->any())
          ->method('detect')
@@ -48,7 +48,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase {
     
     $this->object->addDetector($stub);
     
-    $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+    $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
 
     $stub->expects($this->any())
          ->method('detect')
@@ -62,7 +62,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase {
   public function testDetectFail()
   {
     
-    $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+    $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
 
     $stub->expects($this->any())
          ->method('detect')
@@ -70,7 +70,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase {
     
     $this->object->addDetector($stub);
     
-    $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+    $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
 
     $stub->expects($this->any())
          ->method('detect')

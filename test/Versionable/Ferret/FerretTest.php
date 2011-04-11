@@ -1,11 +1,11 @@
 <?php
-namespace Ferret;
+namespace Versionable\Ferret;
 
-require_once 'src/Ferret/Detector/DetectorInterface.php';
-require_once 'src/Ferret/FerretInterface.php';
-require_once 'src/Ferret/Ferret.php';
+require_once 'src/Versionabe/Ferret/Detector/DetectorInterface.php';
+require_once 'src/Versionabe/Ferret/FerretInterface.php';
+require_once 'src/Versionabe/Ferret/Ferret.php';
 
-use Ferret\Detector\Pathinfo;
+use Versionable\Ferret\Detector\Pathinfo;
 
 /**
  * Test class for Ferret.
@@ -41,7 +41,7 @@ class FerretTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetDetector()
     {
-      $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+      $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
       
       $this->object->setDetector($stub);
       
@@ -53,7 +53,7 @@ class FerretTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetMimeType()
     {
-        $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+        $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
         
         $stub->expects($this->any())
              ->method('detect')
@@ -70,7 +70,7 @@ class FerretTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetMimeTypeUnknown()
     {
-        $stub = $this->getMock("Ferret\Detector\DetectorInterface");
+        $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
         
         $stub->expects($this->any())
              ->method('detect')
