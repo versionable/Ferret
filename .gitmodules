@@ -1,0 +1,3 @@
+[submodule "vendor/autoload"]
+	path = vendor/autoload
+	url = git://github.com/versionable/Autoload.git
