@@ -2,10 +2,6 @@
 
 namespace Versionable\Ferret\Detector;
 
-require_once 'src/Versionabe/Ferret/Detector/DetectorInterface.php';
-require_once 'src/Versionabe/Ferret/Detector/DetectorAbstract.php';
-require_once 'src/Versionabe/Ferret/Detector/MIMEType.php';
-
 /**
  * Test class for MIMEType.
  * @group Ferret

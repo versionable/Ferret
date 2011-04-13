@@ -1,10 +1,6 @@
 <?php
 namespace Versionable\Ferret;
 
-require_once 'src/Versionabe/Ferret/Detector/DetectorInterface.php';
-require_once 'src/Versionabe/Ferret/FerretInterface.php';
-require_once 'src/Versionabe/Ferret/Ferret.php';
-
 use Versionable\Ferret\Detector\Pathinfo;
 
 /**

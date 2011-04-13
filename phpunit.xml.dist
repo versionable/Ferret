@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 
 <!-- see http://www.phpunit.de/wiki/Documentation -->
-<phpunit colors="true"
+<phpunit bootstrap="test/bootstrap.php"
+         colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
@@ -9,15 +10,15 @@
 
   <testsuites>
     <testsuite name="Ferret">
-      <file>test/Ferret/FerretTest.php</file>
+      <file>test/Versionable/Ferret/FerretTest.php</file>
     </testsuite>
     <testsuite name="Detectors">
-      <file>test/Ferret/Detector/CompositeTest.php</file>
-      <file>test/Ferret/Detector/FileinfoTest.php</file>
-      <file>test/Ferret/Detector/PathinfoTest.php</file>
+      <file>test/Versionable/Ferret/Detector/CompositeTest.php</file>
+      <file>test/Versionable/Ferret/Detector/FileinfoTest.php</file>
+      <file>test/Versionable/Ferret/Detector/PathinfoTest.php</file>
     </testsuite>
     <testsuite name="ExternalDetectors">
-      <file>test/Ferret/Detector/MIMETypeTest.php</file>
+      <file>test/Versionable/Ferret/Detector/MIMETypeTest.php</file>
     </testsuite>
   </testsuites>
 
