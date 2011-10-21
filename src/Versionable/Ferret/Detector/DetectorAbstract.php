@@ -6,20 +6,20 @@ use Versionable\Ferret\Detector\DetectorInterface;
 
 abstract class DetectorAbstract implements DetectorInterface
 {
-  
+
   public function getHash()
   {
-    return __CLASS__;
+    return get_class($this);
   }
-  
+
   public function equal(DetectorInterface $detector)
   {
-    if (!is_null($detector) && $this->getHash() === $detector->getHash())
+    if ($this->getHash() === $detector->getHash())
     {
       return true;
     }
-    
+
     return false;
   }
-  
+
 }
