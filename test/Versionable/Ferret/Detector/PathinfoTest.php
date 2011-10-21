@@ -34,13 +34,13 @@ class PathinfoTest extends \PHPUnit_Framework_TestCase
 
     public function testDetect()
     {
-      $this->assertEquals('text/plain', $this->object->detect('data/unit.txt'));
+      $this->assertEquals('text/plain', $this->object->detect(__DIR__.'/../../../data/unit.txt'));
       
     }
     
     public function testDetectFail()
     {
-      $this->assertFalse($this->object->detect('data/unit.false'));
+      $this->assertFalse($this->object->detect(__DIR__.'/../../../data/unit.false'));
       
     } 
     

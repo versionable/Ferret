@@ -35,10 +35,7 @@ class MIMETypeTest extends \PHPUnit_Framework_TestCase {
    * @todo Implement testDetect().
    */
   public function testDetect() {
-    // Remove the following lines when you implement this test.
-    $this->markTestIncomplete(
-    'This test has not been implemented yet.'
-    );
+    $this->assertEquals('text/plain', $this->object->detect(__DIR__.'/../../../data/unit.txt'));
   }
 
 }

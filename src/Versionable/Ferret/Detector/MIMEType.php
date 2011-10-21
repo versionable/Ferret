@@ -12,7 +12,7 @@ class MIMEType extends DetectorAbstract
 {
   public function __construct()
   {
-    if (\method_exists('\MIME_Type', 'autoDetect'))
+    if (false === \method_exists('\MIME_Type', 'autoDetect'))
     {
       throw new DetectorException('MIME type pear library is not loaded');
     }
@@ -20,6 +20,6 @@ class MIMEType extends DetectorAbstract
     
   public function detect($filepath)
   {
-    return MIME_Type::autoDetect($filepath);
+    return \MIME_Type::autoDetect($filepath);
   }
 }

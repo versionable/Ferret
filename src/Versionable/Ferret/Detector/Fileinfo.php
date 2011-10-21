@@ -30,6 +30,10 @@ class Fileinfo extends DetectorAbstract
     
   public function detect($filepath)
   {
+    if (false === is_readable($filepath)) {
+      throw new \InvalidArgumentException(sprintf('The file "%s" does not exist', $filepath));
+    }
+
     $finfo = new \finfo(FILEINFO_MIME_TYPE);
 
     $type = $finfo->file($filepath);

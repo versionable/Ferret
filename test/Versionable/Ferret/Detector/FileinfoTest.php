@@ -38,16 +38,17 @@ class FileinfoTest extends \PHPUnit_Framework_TestCase
      */
     public function testDetect()
     {
-      $this->assertEquals('text/plain', $this->object->detect('data/unit.txt'));
+      $this->assertEquals('text/plain', $this->object->detect(__DIR__.'/../../../data/unit.txt'));
       
     }
     
     /**
      * @todo Implement testDetect().
      */
-    public function testDetectFail()
+    public function testFileNotExist()
     {
-      $this->assertFalse($this->object->detect('data/unit.false'));
-      
+      $this->setExpectedException('InvalidArgumentException');
+
+      $this->object->detect(__DIR__.'/../../../data/unit.false');
     }    
 }

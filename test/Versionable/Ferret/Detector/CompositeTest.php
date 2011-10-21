@@ -52,7 +52,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase {
     
     $this->object->addDetector($stub);
     
-    $this->assertEquals('text/plain', $this->object->detect('data/unit.txt'));
+    $this->assertEquals('text/plain', $this->object->detect(__DIR__.'/../../../data/unit.txt'));
   }
 
   public function testDetectFail()
