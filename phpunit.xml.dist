@@ -13,6 +13,7 @@
       <file>test/Versionable/Ferret/FerretTest.php</file>
     </testsuite>
     <testsuite name="Detectors">
+      <file>test/Versionable/Ferret/Detector/DetectorAbstractTest.php</file>
       <file>test/Versionable/Ferret/Detector/CompositeTest.php</file>
       <file>test/Versionable/Ferret/Detector/FileinfoTest.php</file>
       <file>test/Versionable/Ferret/Detector/PathinfoTest.php</file>

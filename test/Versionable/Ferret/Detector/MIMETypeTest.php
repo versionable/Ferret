@@ -1,6 +1,8 @@
 <?php
 
-namespace Versionable\Ferret\Detector;
+namespace Versionable\Tests\Ferret\Detector;
+
+use Versionable\Ferret\Detector\MIMEType;
 
 /**
  * Test class for MIMEType.
@@ -28,7 +30,7 @@ class MIMETypeTest extends \PHPUnit_Framework_TestCase {
    * This method is called after a test is executed.
    */
   protected function tearDown() {
-    
+
   }
 
   /**

@@ -1,11 +1,12 @@
 <?php
-namespace Versionable\Ferret;
 
-use Versionable\Ferret\Detector\Pathinfo;
+namespace Versionable\Tests\Ferret\Detector;
+
+use Versionable\Ferret\Ferret;
 
 /**
  * Test class for Ferret.
- * 
+ *
  * @group Ferret
  */
 class FerretTest extends \PHPUnit_Framework_TestCase
@@ -33,14 +34,14 @@ class FerretTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * 
+     *
      */
     public function testSetDetector()
     {
       $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
-      
+
       $this->object->setDetector($stub);
-      
+
       $this->assertEquals($stub, $this->readAttribute($this->object, 'detector'));
     }
 
@@ -50,16 +51,16 @@ class FerretTest extends \PHPUnit_Framework_TestCase
     public function testGetMimeType()
     {
         $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
-        
+
         $stub->expects($this->any())
              ->method('detect')
              ->will($this->returnValue('text/plain'));
-        
+
         $this->object->setDetector($stub);
-        
-        $this->assertEquals('text/plain', $this->object->getMimeType('somefile.txt'));        
+
+        $this->assertEquals('text/plain', $this->object->getMimeType('somefile.txt'));
     }
-    
+
 
     /**
      * @todo Implement testGetMimeType().
@@ -67,13 +68,13 @@ class FerretTest extends \PHPUnit_Framework_TestCase
     public function testGetMimeTypeUnknown()
     {
         $stub = $this->getMock("Versionable\Ferret\Detector\DetectorInterface");
-        
+
         $stub->expects($this->any())
              ->method('detect')
              ->will($this->returnValue(false));
-        
+
         $this->object->setDetector($stub);
-        
+
         $this->assertFalse($this->object->getMimeType('somefile.unknown'));
     }
 }
